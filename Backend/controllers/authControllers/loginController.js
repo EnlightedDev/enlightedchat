@@ -30,7 +30,7 @@ export const Login = async (req, res) => {
             } else {
 
                 res.status(400).json({
-                    error: "Incorrect Password!"
+                    message: "Incorrect Password!"
                 })
 
             }
@@ -38,7 +38,7 @@ export const Login = async (req, res) => {
         } else {
 
             res.status(400).json({
-                error: "User not found with this Phone Number!"
+                message: "User not found with this Phone Number!"
             })
 
         }

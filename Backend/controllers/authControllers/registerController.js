@@ -18,7 +18,7 @@ export const Register = async (req, res) => {
 
         if(password !== confirmPassword) {
             return res.status(400).json({
-                error : "Uh Oh! Password and Confirm Password do not match"
+                message : "Uh Oh! Password and Confirm Password do not match"
             })
         }
 
@@ -26,7 +26,7 @@ export const Register = async (req, res) => {
 
         if(user) {
             return res.status(400).json({
-                error: "Uh Oh! Profile already exists with this phoneNumber, Please try to Login!"
+                message: "Uh Oh! Profile already exists with this phoneNumber, Please try to Login!"
             })
         }
 
@@ -60,14 +60,14 @@ export const Register = async (req, res) => {
             })
         } else {
             res.status(400).json({
-                error: "Invalid User Data!"
+                message: "Invalid User Data!"
             })
         }
 
     } catch(e) {
 
         res.status(500).json({
-            error: `Could not save profile! Register Failed beacause ${e}`
+            message: `Could not save profile! Register Failed beacause ${e}`
         })
 
     }
