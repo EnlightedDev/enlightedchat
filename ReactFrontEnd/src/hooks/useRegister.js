@@ -2,9 +2,11 @@
 
 import { useState } from "react"
 import toast from "react-hot-toast"
+import { useAuthContext } from "../context/authContext"
 
 const useRegister = () => {
     const [loading, setLoading] = useState(false)
+    const {setCurrentUser} = useAuthContext()
     
     const register = async({firstName, lastName, displayName, password, confirmPassword, phoneNumber}) => {
 
@@ -15,6 +17,8 @@ const useRegister = () => {
             return
         }
 
+        setLoading(true)
+
         try {
             const res = await fetch("/api/auth/register", {
                 method: "POST",
@@ -24,6 +28,13 @@ const useRegister = () => {
 
             const responseData = await res.json()
             console.log(responseData)
+            if(responseData.error) {
+                throw new Error(responseData.error)
+            }
+
+
+            localStorage.setItem("currentUser", JSON.stringify(responseData))
+            setCurrentUser(responseData)
 
         } catch (error) {
             console.log(error)

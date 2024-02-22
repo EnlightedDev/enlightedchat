@@ -14,7 +14,7 @@ const Register = () => {
     phoneNumber: ""
   })
 
-  const {loading, register} = useRegister()
+  const { loading, register} = useRegister()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,7 +97,7 @@ const Register = () => {
           </div>
 
           <div className = "mt-4">
-          <button className="btn btn-success w-full">Register</button>
+          <button className="btn btn-success w-full" disabled = {loading}>{loading ? <span className="loading loading-spinner"></span> : "Register" }</button>
           </div>
         </form>
 
