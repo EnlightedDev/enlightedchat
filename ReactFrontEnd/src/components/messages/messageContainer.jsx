@@ -18,7 +18,7 @@ const MessageContainer = () => {
 
 
   return (
-    <div className="md:min-w-[450px] flex flex-col">
+    <div className="w-[70%] md:min-w-[450px] flex flex-col">
       {noChatSelected ? <NoChatSelected></NoChatSelected> : (
       <>
       <div className="bg-slate-500 px-4 py-2 mb-2">

@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
 
     background-color: #272b28;
-
 }
 
 ::-webkit-scrollbar {
@@ -25,4 +26,10 @@ body {
 
 ::-webkit-scrollbar-thumb :hover {
     background: #242424;
+}
+
+#root {
+
+    padding: 0;
+
 }

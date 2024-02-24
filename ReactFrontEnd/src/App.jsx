@@ -11,7 +11,7 @@ function App() {
   const {currentUser} = useAuthContext()
 
   return (
-    <div className = "p-4 h-screen flex items-center justify-center">
+    <div className = "h-screen p-4 flex items-center justify-center ">
       <Routes>
         <Route path="/" element = { currentUser ? <Home></Home> : <Navigate to={"/login"}></Navigate>}></Route>
         <Route path="/login" element = { currentUser ? <Navigate to="/"></Navigate> : <Login></Login>}></Route>

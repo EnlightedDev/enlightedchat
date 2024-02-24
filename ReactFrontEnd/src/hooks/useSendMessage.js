@@ -1,6 +1,7 @@
 import { useState } from "react"
 import toast from "react-hot-toast"
 import {useConversationsContext} from "../context/conversationsContext"
+// import {useAuthContext} from "../context/authContext"
 
 const useSendMessage = () => {
 
@@ -13,7 +14,6 @@ const useSendMessage = () => {
 
         try {
         setLoading(true)
-
         const result = await fetch(`/api/messages/send/${selectedConversation._id}`, {
             method : "POST",
             headers: {
@@ -29,8 +29,10 @@ const useSendMessage = () => {
             throw new Error(responseData.error)
 
         }
+        
+        setMessages([...messages, responseData.newMessage])
 
-        setMessages([...messages, responseData])
+        console.log(messages)
 
     }
     catch(error) {

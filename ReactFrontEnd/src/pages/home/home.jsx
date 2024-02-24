@@ -5,7 +5,7 @@ const Home = () => {
   return (
    
       
-      <div className = "flex sm:h-[450px] md:h-[550px] rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg shadow-lg shadow-green-950 bg-gray-900">
+      <div className = "flex h-full w-full rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg shadow-lg shadow-green-950 bg-gray-900">
         <SideBar></SideBar>
         <MessageContainer></MessageContainer>
       </div>

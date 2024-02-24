@@ -20,7 +20,7 @@ const useGetMessages = () => {
 
           const result = await fetch(`/api/messages/${selectedConversation._id}`)
 
-          const responseData = result.json()
+          const responseData = await result.json()
 
           if(responseData.error) {
             throw new Error(responseData.error)
