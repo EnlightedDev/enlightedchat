@@ -51,7 +51,7 @@ const Login = () => {
           </div>
         </form>
 
-        <Link to={"/register"} className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">I already have an Account</Link>
+        <Link to={"/register"} className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">I do not have an account yet!</Link>
       </div>
 
     </div>

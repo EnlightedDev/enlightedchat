@@ -101,7 +101,7 @@ const Register = () => {
           </div>
         </form>
 
-        <Link to={"/login"} className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">I do not have an account yet!</Link>
+        <Link to={"/login"} className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">Already have an account?</Link>
 
       </div>
 
